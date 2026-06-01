@@ -1,0 +1,2 @@
+import { Link, Outlet } from 'react-router-dom';
+export default function Layout(){return <><header className='bg-white border-b border-orange-200 sticky top-0 z-10'><nav className='container flex gap-4 items-center'><Link className='font-black text-orange-800' to='/'>SMWKP</Link><Link to='/explore'>Explore</Link><Link to='/dashboard'>User</Link><Link to='/owner/dashboard'>Owner</Link><Link to='/admin/dashboard'>Admin</Link><span className='ml-auto badge'>Dinas Pariwisata Kota Palembang</span></nav></header><main className='container'><Outlet/></main></>}

@@ -1,0 +1,1 @@
+export default function StateBlock({loading,error,empty,children}){if(loading)return <div className='card animate-pulse'>Memuat data...</div>;if(error)return <div className='card text-red-700'>Terjadi kesalahan: {error}</div>;if(empty)return <div className='card text-slate-500'>Belum ada data.</div>;return children;}

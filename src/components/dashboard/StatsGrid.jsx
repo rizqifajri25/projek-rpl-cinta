@@ -1,0 +1,1 @@
+export default function StatsGrid({stats={}}){return <div className='grid md:grid-cols-4 gap-4'>{Object.entries(stats).map(([k,v])=><div className='card' key={k}><p className='text-sm text-slate-500'>{k.replaceAll('_',' ')}</p><strong className='text-3xl'>{String(v)}</strong></div>)}</div>}

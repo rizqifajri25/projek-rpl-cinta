@@ -1,0 +1,1 @@
+import StatsGrid from '../../components/dashboard/StatsGrid';export default function DashboardPage(){return <><h1 className='text-3xl font-black mb-4'>Dashboard Wisatawan</h1><StatsGrid stats={{favorit:0,review:0,reservasi:0,notifikasi:0}}/></>}

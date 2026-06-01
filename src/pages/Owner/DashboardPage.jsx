@@ -1,0 +1,1 @@
+import StatsGrid from '../../components/dashboard/StatsGrid';export default function OwnerDashboardPage(){return <><h1 className='text-3xl font-black mb-4'>Dashboard Pemilik Usaha</h1><StatsGrid stats={{usaha:0,menu:0,review:0,reservasi:0}}/></>}

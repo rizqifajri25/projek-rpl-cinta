@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "test": "vitest run",
+    "lint": "eslint src --ext .js,.jsx"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "axios": "latest",
+    "firebase": "latest",
+    "lucide-react": "latest",
+    "tailwindcss": "latest",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "tailwind-merge": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "vitest": "latest",
+    "typescript": "latest"
+  }
+}

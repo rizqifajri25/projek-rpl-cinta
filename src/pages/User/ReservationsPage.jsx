@@ -1,0 +1,1 @@
+export default function ReservationsPage(){return <section className='card'><h1 className='text-2xl font-bold'>Riwayat Reservasi</h1><p>Status: pending, confirmed, rejected, cancelled, completed.</p></section>}
