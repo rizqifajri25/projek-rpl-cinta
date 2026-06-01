@@ -1,0 +1,1 @@
+export default function OwnerReservationsPage(){return <section className='card'><h1 className='text-2xl font-bold'>Konfirmasi/Tolak Reservasi</h1><button className='btn'>Konfirmasi</button></section>}

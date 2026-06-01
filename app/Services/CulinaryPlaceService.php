@@ -1,0 +1,3 @@
+<?php
+namespace App\Services;
+class CulinaryPlaceService{public function __construct(private \App\Contracts\Repositories\CulinaryPlaceRepositoryInterface $places){} public function search(array $f=[]){return \App\Models\CulinaryPlace::with(['category','galleries'])->when($f['q']??null,fn($q,$v)=>$q->where('name','like',"%$v%"))->when($f['category_id']??null,fn($q,$v)=>$q->where('category_id',$v))->where('verification_status','approved')->paginate($f['per_page']??15);} public function create(array $d){$d['slug']=\Illuminate\Support\Str::slug($d['name']).'-'.uniqid();return $this->places->create($d);} public function verify(int $id,string $status){return $this->places->update($id,['verification_status'=>$status]);}}

@@ -1,0 +1,1 @@
+export default function ProfilePage(){return <form className='card grid gap-3'><h1 className='text-2xl font-bold'>Profile & Avatar</h1><input className='input' placeholder='Nama'/><input className='input' placeholder='Telepon'/><input className='input' type='file'/><button className='btn'>Simpan</button></form>}

@@ -1,0 +1,1 @@
+export default function CulinaryFormPage(){return <form className='card grid gap-3'><h1 className='text-2xl font-bold'>Form Usaha, NIB, KTP, Sertifikat Halal</h1><input className='input' placeholder='Nama usaha'/><textarea className='input' placeholder='Alamat'/><input className='input' type='file'/><button className='btn'>Simpan</button></form>}

@@ -1,0 +1,4 @@
+<?php
+namespace App\Http\Controllers\Api;
+use App\Http\Controllers\Controller;use Illuminate\Http\Request;use App\Services\{AuthService,UserService,CategoryService,CulinaryPlaceService,ReviewService,ReservationService,NotificationService};
+class CategoryController extends Controller{public function index(CategoryService $s){return $s->list(request()->all());} public function store(Request $r,CategoryService $s){return response()->json($s->create($r->validate(['name'=>'required','description'=>'nullable','icon'=>'nullable','status'=>'nullable'])),201);} public function update(Request $r,$id,CategoryService $s){return $s->update($id,$r->validate(['name'=>'sometimes','description'=>'nullable','icon'=>'nullable','status'=>'nullable']));} public function destroy($id,CategoryService $s){$s->delete($id);return response()->noContent();}}

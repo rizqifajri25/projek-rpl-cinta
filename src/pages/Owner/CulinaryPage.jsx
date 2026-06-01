@@ -1,0 +1,1 @@
+export default function OwnerCulinaryPage(){return <section className='card'><h1 className='text-2xl font-bold'>Kelola Usaha</h1><a className='btn' href='/owner/culinary/create'>Daftarkan Usaha</a></section>}

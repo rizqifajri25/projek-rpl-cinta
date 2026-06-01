@@ -1,0 +1,2 @@
+import { Link } from 'react-router-dom';
+export default function CulinaryCard({place}){return <article className='card grid gap-2'><span className='badge'>{place.category?.name||place.district}</span><h3 className='text-xl font-bold'>{place.name}</h3><p>{place.description}</p><p>⭐ {place.rating_average||0} · Rp{Number(place.average_price||0).toLocaleString('id-ID')}</p><Link className='btn text-center' to={`/culinary/${place.slug||place.id}`}>Lihat Detail</Link></article>}

@@ -1,0 +1,4 @@
+<?php
+namespace App\Http\Controllers\Api;
+use App\Http\Controllers\Controller;use Illuminate\Http\Request;use App\Services\{AuthService,UserService,CategoryService,CulinaryPlaceService,ReviewService,ReservationService,NotificationService};
+class AdminDashboardController extends Controller{public function __invoke(){return ['total_user'=>\App\Models\User::count(),'total_owner'=>\App\Models\User::role('pemilik_usaha')->count(),'total_culinary'=>\App\Models\CulinaryPlace::count(),'total_review'=>\App\Models\Review::count(),'total_reservation'=>\App\Models\Reservation::count(),'popular_category'=>\App\Models\Category::withCount('culinaryPlaces')->orderByDesc('culinary_places_count')->first(),'popular_culinary'=>\App\Models\CulinaryPlace::orderByDesc('view_count')->take(5)->get(),'rating_summary'=>\App\Models\CulinaryPlace::selectRaw('avg(rating_average) average_rating, sum(rating_total) total_rating')->first()];}}

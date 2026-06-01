@@ -1,0 +1,1 @@
+import StatsGrid from '../../components/dashboard/StatsGrid';export default function AdminDashboardPage(){return <><h1 className='text-3xl font-black mb-4'>Dashboard Statistik Admin</h1><StatsGrid stats={{total_user:0,total_owner:0,total_culinary:0,total_review:0,total_reservation:0}}/></>}
